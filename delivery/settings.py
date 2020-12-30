@@ -146,7 +146,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/') 
+STATIC_ROOT = os.path.join(BASE_DIR, '/usr/src/app/static/') 
 
 AUTH_USER_MODEL = 'platform_delivery.User'
 

@@ -144,9 +144,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/usr/src/app/static/'
-
-STATIC_ROOT = os.path.join(BASE_DIR, '/usr/src/app/static/') 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = "/static/"
+ 
 
 AUTH_USER_MODEL = 'platform_delivery.User'
 

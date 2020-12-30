@@ -3,9 +3,7 @@
   "dockerfileLines": [
     "FROM python:3",
     "ENV PYTHONUNBUFFERED=1",
-    "RUN mkdir -p /usr/src/app",
-    "WORKDIR /usr/src/app",
-    "COPY . /usr/src/app",
+    "COPY . .",
     "RUN pip install -r requirements.txt",
     "COPY ./utils/ /usr/src/utils",
     "EXPOSE 80",

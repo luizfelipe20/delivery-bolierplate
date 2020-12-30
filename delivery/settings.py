@@ -89,9 +89,9 @@ WSGI_APPLICATION = 'delivery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-name = os.environ.get("CR_DB_NAME") 
-user = os.environ.get("CR_DB_USER")
-password = os.environ.get("CR_DB_PASSWORD")
+name = os.environ.get("POSTGRES_DB") 
+user = os.environ.get("POSTGRES_USER")
+password = os.environ.get("POSTGRES_PASSWORD")
 host = os.environ.get("CR_DB_HOST")
 port = os.environ.get("CR_DB_PORT")
 

@@ -89,23 +89,8 @@ WSGI_APPLICATION = 'delivery.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-name = os.environ.get("POSTGRES_DB") 
-user = os.environ.get("POSTGRES_USER")
-password = os.environ.get("POSTGRES_PASSWORD")
-host = os.environ.get("CR_DB_HOST")
-port = os.environ.get("CR_DB_PORT")
-
-DATABASES = {
-    "default": {
-    "ENGINE": "django.db.backends.postgresql",
-    "NAME": name,
-    "USER": user,
-    "PASSWORD": password,
-    "HOST": host,
-    "PORT": port,
-    }
-}
-
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config(conn_max_age=None)
 
 
 # Password validation
@@ -144,13 +129,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = '/usr/src/app/static'
-STATIC_URL = '/static/' 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = 'platform_delivery.User'
-
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 
 SENDGRID_AUTH_TOKEN = os.environ['SENDGRID_AUTH_TOKEN']
 SENDGRID_URL = os.environ['SENDGRID_URL']

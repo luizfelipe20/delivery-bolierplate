@@ -23,6 +23,7 @@ if os.path.isfile(dotenv_file):
 
 SECRET_KEY = 'v^87*ncmnz!e=eyo_cgoey$%7ga#ug!h469)ou(11j(0q#uj!2'
 
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']

@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 import dotenv
-import mimetypes
-
-mimetypes.add_type("text/css", ".css", True)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +23,6 @@ if os.path.isfile(dotenv_file):
 
 SECRET_KEY = 'v^87*ncmnz!e=eyo_cgoey$%7ga#ug!h469)ou(11j(0q#uj!2'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
